@@ -1,0 +1,7 @@
+<h1>Add a new build</h1>
+
+<%= form_with model: @build, local: true do |f| %>
+  <%= render partial: "form", locals: { f: f } %>
+  
+  <%= f.submit "Save" %>
+<% end %>

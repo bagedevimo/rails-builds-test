@@ -1,0 +1,32 @@
+<h1>Builds</h1>
+
+<%= link_to "New build", new_build_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Build by</th>
+      <th>Primary skill</th>
+      <th>Ascendancy</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%- @builds.each do |build| -%>
+      <tr>
+        <td><%= link_to build.name, build_path(build) %></td>
+        <td><%= build.made_by %></td>
+        <td><%= build.primary_skill %></td>
+        <td><%= build.ascendancy %></td>
+        <td>
+          <%= button_to "Edit", edit_build_path(build), method: :get %>
+          <%= button_to "Destroy", build_path(build), method: :delete %>
+        </td>
+
+      </tr>
+    <%- end -%>
+  </tbody>
+</table>
+

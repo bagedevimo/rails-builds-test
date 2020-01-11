@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  made_by: MyString
+  name: MyString
+  primary_skill: MyString
+  ascendancy: MyString
+
+two:
+  made_by: MyString
+  name: MyString
+  primary_skill: MyString
+  ascendancy: MyString
