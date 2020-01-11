@@ -9,11 +9,6 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   apt-get install -y libvips-tools && \
   apt-get install -y locales
 
-RUN echo "en_us.UTF-8 UTF-8" > /etc/locale.gen && \
-  locale-gen en_US.UTF-8 && \
-  /usr/sbin/update-locale LANG=en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
-
 ENV APP_PATH=/app
 RUN mkdir $APP_PATH
 WORKDIR $APP_PATH
